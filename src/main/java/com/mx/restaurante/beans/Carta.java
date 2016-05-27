@@ -15,9 +15,9 @@ public class Carta implements Serializable{
 	private Integer id;
 	@Column( name = "descripcion")
 	private String descripcion;
-//	@ManyToOne(cascade = CascadeType.ALL)
-//	@Column( name = "familia")
-//	private Familia familia;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn( name = "id_familia")
+	private Familia familia;
 	@Column( name = "unidad")
 	private String unidad;
 	@Column( name = "aplica_dcto")
@@ -43,13 +43,13 @@ public class Carta implements Serializable{
 		this.descripcion = descripcion;
 	}
 
-//	public Familia getFamilia() {
-//		return familia;
-//	}
-//
-//	public void setFamilia(Familia familia) {
-//		this.familia = familia;
-//	}
+	public Familia getFamilia() {
+		return familia;
+	}
+
+	public void setFamilia(Familia familia) {
+		this.familia = familia;
+	}
 
 	public String getUnidad() {
 		return unidad;

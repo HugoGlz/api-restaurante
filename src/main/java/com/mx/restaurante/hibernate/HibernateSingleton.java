@@ -20,7 +20,7 @@ public final class HibernateSingleton {
     }
 	    
     private static void buildSessionFactory(){
-    	if(HibernateSingleton.sessionFactory != null) return;
+    	if(HibernateSingleton.sessionFactory != null && !sessionFactory.isClosed()) return;
     	
     	try{
     		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()

@@ -109,9 +109,8 @@ public class HibernateUtils {
 			this.beginOperation();
 			record = (Serializable) this.session.get(typeClass, id);
 		}finally{
-			this.session.close();
+//			this.session.close();
 		}
-		
 		return record;
 	}
 	

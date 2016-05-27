@@ -2,10 +2,13 @@ package com.mx.restaurante.beans;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,8 +22,12 @@ public class Familia implements Serializable{
 	private Integer id;
 	@Column( name = "descripcion")
 	private String descripcion;
-//	private Area area;
-//	private Grupo grupo;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn( name = "id_area")
+	private Area area;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn( name = "id_grupo")
+	private Grupo grupo;
 	@Column( name = "agrupa")
 	private Integer agrupa;
 	
@@ -42,21 +49,21 @@ public class Familia implements Serializable{
 		this.descripcion = descripcion;
 	}
 
-//	public Area getArea() {
-//		return area;
-//	}
-//
-//	public void setArea(Area area) {
-//		this.area = area;
-//	}
-//
-//	public Grupo getGrupo() {
-//		return grupo;
-//	}
-//
-//	public void setGrupo(Grupo grupo) {
-//		this.grupo = grupo;
-//	}
+	public Area getArea() {
+		return area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
+
+	public Grupo getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
+	}
 
 	public Integer getAgrupa() {
 		return agrupa;

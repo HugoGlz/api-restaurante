@@ -2,19 +2,38 @@ package com.mx.restaurante.beans;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_sucursales")
 public class Sucursal implements Serializable{
 	
 	private static final long serialVersionUID = 3569441677034361363L;
 	
+	@Id @GeneratedValue
+	@Column( name = "id_sucursal")
 	private Integer id;
+	@Column( name = "nombre")
 	private String nombre;
+	@Column( name = "rfc")
 	private String rfc;
+	@Column( name = "razon_social")
 	private String razonSocial;
+	@Column( name = "direccion")
 	private String direccion;
+	@Column( name = "num_ext")
 	private String numExt;
+	@Column( name = "num_int")
 	private String numInt;
+	@Column( name = "colonia")
 	private String colonia;
+	@Column( name = "municipio")
 	private String municipio;
+	@Column( name = "cp")
 	private String cp;
 	
 	public Sucursal(){}

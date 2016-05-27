@@ -3,24 +3,48 @@ package com.mx.restaurante.beans;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_enc_vtas")
 public class Venta implements Serializable{
 
 	private static final long serialVersionUID = 2624919631792365820L;
 	
+	@Id @GeneratedValue
+	@Column( name = "id_enc")
 	private Integer id;
+	@Column( name = "fecha")
 	private Calendar fecha;
+	@Column( name = "tipo")
 	private Integer tipo;
+	@Column( name = "tipo_nota")
 	private Integer tipoNota;
+	@Column( name = "turno")
 	private Integer turno;
+	@Column( name = "num_mesa")
 	private Integer mesa;
+	@Column( name = "id_mesero")
 	private Integer mesero;
+	@Column( name = "pax")
 	private Integer pax;
+	@Column( name = "abre")
 	private Calendar abre;
+	@Column( name = "descuento")
 	private Double descuento;
+	@Column( name = "usr_descuento")
 	private Integer usuarioDescuento;
+	@Column( name = "usr_cancelacion")
 	private Integer usuarioCancelacion;
+	@Column( name = "hora_cancelacion")
 	private Calendar horaCancelacion;
+	@Column( name = "hora_llegada")
 	private Calendar horaLlegada;
+	@Column( name = "estatus")
 	private Integer estatus;
 	
 	public Venta(){}

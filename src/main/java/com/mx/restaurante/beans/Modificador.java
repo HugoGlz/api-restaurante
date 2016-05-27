@@ -2,15 +2,30 @@ package com.mx.restaurante.beans;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_modificadores")
 public class Modificador implements Serializable{
 
 	private static final long serialVersionUID = 7861352324710503116L;
 	
+	@Id @GeneratedValue
+	@Column( name = "id_modificador")
 	private Integer id;
+	@Column( name = "descripcion")
 	private String descripcion;
+	@Column( name = "precio")
 	private Double precio;
+	@Column( name = "id_familia")
 	private Integer familia;
+	@Column( name = "id_variante")
 	private Integer variante;
+	@Column( name = "estatus")
 	private Integer estatus;
 	
 	public Modificador(){}

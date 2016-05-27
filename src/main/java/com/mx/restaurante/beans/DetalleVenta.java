@@ -3,28 +3,56 @@ package com.mx.restaurante.beans;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_det_vtas")
 public class DetalleVenta implements Serializable{
 
 	private static final long serialVersionUID = -6386372164871327800L;
 	
+	@Id @GeneratedValue
+	@Column( name = "id_det")
 	private Integer id;
+	@Column( name = "id_enc")
 	private Integer venta;
+	@Column( name = "id_carta")
 	private Integer carta;
+	@Column( name = "id_variante")
 	private Integer variante;
+	@Column( name = "descripcion")
 	private String descripcion;
+	@Column( name = "cantidad")
 	private Integer cantidad;
+	@Column( name = "precio")
 	private Double precio;
+	@Column( name = "precio_neto")
 	private Double precioNeto;
+	@Column( name = "comanda")
 	private Integer comanda;
+	@Column( name = "id_mesero")
 	private Integer mesero;
+	@Column( name = "id_mesa")
 	private Integer mesa;
+	@Column( name = "comensal")
 	private Integer comensal;
+	@Column( name = "hora_registro")
 	private Calendar horaRegistro;
+	@Column( name = "usr_cancelacion")
 	private Integer usuarioCancelacion;
+	@Column( name = "hora_cancelacion")
 	private Calendar horaCancelacion;
+	@Column( name = "usr_cortesia")
 	private Integer usuarioCortesia;
+	@Column( name = "hora_cortesia")
 	private Calendar horaCortesia;
+	@Column( name = "aplica_dcto")
 	private Integer aplicaDescuento;
+	@Column( name = "estatus")
 	private Integer estatus;
 	
 	public DetalleVenta(){}

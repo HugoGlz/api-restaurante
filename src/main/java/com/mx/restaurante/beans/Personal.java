@@ -3,19 +3,38 @@ package com.mx.restaurante.beans;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_personal")
 public class Personal implements Serializable{
 	
 	private static final long serialVersionUID = -2922723048166482903L;
 	
+	@Id @GeneratedValue
+	@Column( name = "id_personal")
 	private Integer id;
+	@Column( name = "nombre")
 	private String nombre;
+	@Column( name = "apodo")
 	private String apodo;
+	@Column( name = "tipo")
 	private Integer tipo;
+	@Column( name = "nip")
 	private Integer nip;
+	@Column( name = "fecha_ingreso")
 	private Date fechaIngreso;
+	@Column( name = "fecha_baja")
 	private Date fechaBaja;
+	@Column( name = "sueldo_diario")
 	private Double sueldoDiario;
+	@Column( name = "estatus")
 	private Integer estatus;
+	
 	private Asistencia asistencia;
 	private Operacion operacion;
 	

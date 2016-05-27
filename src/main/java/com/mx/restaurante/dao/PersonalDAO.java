@@ -18,6 +18,10 @@ public class PersonalDAO extends HibernateUtils{
 		return personal;
 	}
 	
+	public Personal getPersonalById(Integer id){
+		return (Personal)super.findById(Personal.class, id);
+	}
+	
 	public Asistencia getAsistenciaByIdPersonal(int idPersonal, String date){
 		String query = "FROM Asistencia WHERE empleado=" + idPersonal + " AND DATE(fecha) = '" + date + "'";
 		

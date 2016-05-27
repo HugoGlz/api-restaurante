@@ -8,26 +8,25 @@
     <property name="hibernate.connection.username">user_facturacion</property>
     <property name="hibernate.connection.password">pass_facturacion</property>
     
-    <mapping class="com.mx.restaurante.beans.Carta"/>
     
-    <!--  
-    <mapping resource="com/mx/restaurante/hbm/Operacion.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Personal.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Estacion.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Sucursal.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Usuario.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Asistencia.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Mesa.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Familia.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Area.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Grupo.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Variante.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Modificador.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Precio.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Venta.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/DetalleVenta.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/DetalleModificador.hbm.xml"/>
-    <mapping resource="com/mx/restaurante/hbm/Folio.hbm.xml"/>
-    -->
+    <mapping class="com.mx.restaurante.beans.Operacion"/>
+    <mapping class="com.mx.restaurante.beans.Personal"/>
+    <mapping class="com.mx.restaurante.beans.Estacion"/>
+    <mapping class="com.mx.restaurante.beans.Sucursal"/>
+    <mapping class="com.mx.restaurante.beans.Usuario"/>
+    <mapping class="com.mx.restaurante.beans.Asistencia"/>
+    <mapping class="com.mx.restaurante.beans.Mesa"/>
+    <mapping class="com.mx.restaurante.beans.Familia"/>
+    <mapping class="com.mx.restaurante.beans.Area"/>
+    <mapping class="com.mx.restaurante.beans.Grupo"/>
+    <mapping class="com.mx.restaurante.beans.Carta"/>
+    <mapping class="com.mx.restaurante.beans.Variante"/>
+    <mapping class="com.mx.restaurante.beans.Modificador"/>
+    <mapping class="com.mx.restaurante.beans.Precio"/>
+    <mapping class="com.mx.restaurante.beans.Venta"/>
+    <mapping class="com.mx.restaurante.beans.DetalleVenta"/>
+    <mapping class="com.mx.restaurante.beans.DetalleModificador"/>
+    <mapping class="com.mx.restaurante.beans.Folio"/>
+    
   </session-factory>
 </hibernate-configuration>

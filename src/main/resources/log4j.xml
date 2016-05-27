@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="A1" class="org.apache.log4j.ConsoleAppender">
+       <layout class="org.apache.log4j.PatternLayout">
+           <param name="ConversionPattern" value="[%p][SalesOrderServices] %d %c - %m %n"/>
+       </layout>
+   </appender>
+
+   <appender name="R" class="org.apache.log4j.RollingFileAppender">
+   		<param name="file" value="/opt/tomcat6/apache-tomcat-7.0.47/logs/SalesOrderServices.log" /> 
+   		<param name="append" value="false" />
+   		<param name="threshold" value="INFO" />
+   		<param name="maxFileSize" value="50000KB" />
+   		<param name="MaxBackupIndex" value="5" />
+   		<layout class="org.apache.log4j.PatternLayout">
+           <param name="ConversionPattern" value="[%p][SalesOrderServices] %d %c - %m %n"/>
+       </layout>
+   </appender>
+   
+   <appender name="mail" class="org.apache.log4j.net.SMTPAppender">
+   		<param name="SMTPProtocol" value="smtps" />
+   		<param name="SMTPUsername" value="robot@railtronix.com" />
+   		<param name="SMTPPassword" value="kirkoff8791" />
+   		<param name="SMTPHost" value="smtp.gmail.com" />
+   		<param name="SMTPPort" value="465" />
+   		<param name="Subject" value="Railtronix WebServices - Errors on Sales Order Service Instance" />
+   		<param name="To" value="hgonzalez@railtronix.com" />
+   		<param name="From" value="railtronix.error@railtronix.com" />
+   		<param name="BufferSize" value="50" />
+   		<layout class="org.apache.log4j.PatternLayout">
+           <param name="ConversionPattern" value="[%p][SalesOrderServices] %d %c - %m %n"/>
+       </layout>
+   </appender>
+   
+   <appender name="async" class="org.apache.log4j.AsyncAppender">
+       <param name="BufferSize" value="500"/>
+       <appender-ref ref="A1"/>
+       <!--  
+       <appender-ref ref="mail"/> 
+       <appender-ref ref="R"/>
+       -->
+   </appender> 
+
+	<root>
+	    <priority value="INFO"></priority>
+	    <appender-ref ref="async"/>
+	</root>
+
+</log4j:configuration>

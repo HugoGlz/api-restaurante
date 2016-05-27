@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.Mesa" table="tbl_mesas">
+        <id name="numero" type="java.lang.Integer">
+            <column name="numero" />
+            <generator class="identity" />
+        </id>        
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion"/>
+        </property>
+        <many-to-one name="estacion" class="com.mx.restaurante.beans.Estacion" lazy="false">
+            <column name="id_estacion" not-null="true" />
+        </many-to-one>
+        <property name="reservada" type="java.lang.Integer">
+            <column name="reservada"/>
+        </property>
+        <property name="estatus" type="java.lang.Integer">
+            <column name="estatus"/>
+        </property>
+        <property name="fechaReservacion" type="java.util.Calendar">
+            <column name="fecha_res"/>
+        </property>
+    </class>
+</hibernate-mapping>

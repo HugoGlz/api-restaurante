@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.Carta" table="tbl_carta">
+        <id name="id" type="java.lang.Integer">
+            <column name="id_carta" />
+            <generator class="identity" />
+        </id>        
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion"/>
+        </property>
+        <!--  
+        <many-to-one name="familia" class="com.mx.restaurante.beans.Familia" lazy="false">
+            <column name="id_familia" not-null="true" />
+        </many-to-one>
+        -->
+        <property name="unidad" type="java.lang.String">
+            <column name="unidad"/>
+        </property>
+        <property name="aplicaDescuento" type="java.lang.Integer">
+            <column name="aplica_dcto"/>
+        </property>
+        <property name="estatus" type="java.lang.Integer">
+            <column name="estatus"/>
+        </property>
+    </class>
+</hibernate-mapping>

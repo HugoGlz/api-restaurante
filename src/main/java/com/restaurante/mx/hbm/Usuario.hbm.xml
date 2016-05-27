@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.Usuario" table="tbl_usuarios">
+        <id name="id" type="java.lang.Integer">
+            <column name="id_usuario" />
+            <generator class="identity" />
+        </id>        
+        <property name="password" type="java.lang.String">
+            <column name="psw"/>
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre"/>
+        </property>
+        <property name="estatus" type="java.lang.Integer">
+            <column name="estatus"/>
+        </property>
+        <property name="permisosWeb" type="java.lang.String">
+            <column name="permisos_web"/>
+        </property>
+        <property name="permisosAdm" type="java.lang.String">
+            <column name="permisos_adm"/>
+        </property>
+    </class>
+</hibernate-mapping>

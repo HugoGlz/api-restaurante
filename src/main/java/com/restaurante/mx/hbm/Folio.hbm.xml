@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.Folio" table="tbl_folios">
+        <id name="id" type="java.lang.Integer">
+            <column name="id_folios" />
+            <generator class="identity" />
+        </id>        
+        <property name="siguiente" type="java.lang.Integer">
+            <column name="siguiente"/>
+        </property>
+    </class>
+</hibernate-mapping>

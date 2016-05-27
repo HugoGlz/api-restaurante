@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.Sucursal" table="tbl_sucursales">
+        <id name="id" type="java.lang.Integer">
+            <column name="id_sucursal" />
+            <generator class="identity" />
+        </id>        
+        <property name="rfc" type="java.lang.String">
+            <column name="rfc"/>
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre"/>
+        </property>
+        <property name="razonSocial" type="java.lang.String">
+            <column name="razon_social"/>
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="direccion"/>
+        </property>
+        <property name="numExt" type="java.lang.String">
+            <column name="num_ext"/>
+        </property>
+        <property name="numInt" type="java.lang.String">
+            <column name="num_int"/>
+        </property>
+        <property name="colonia" type="java.lang.String">
+            <column name="colonia"/>
+        </property>
+        <property name="municipio" type="java.lang.String">
+            <column name="municipio"/>
+        </property>
+        <property name="cp" type="java.lang.String">
+            <column name="cp"/>
+        </property>
+    </class>
+</hibernate-mapping>

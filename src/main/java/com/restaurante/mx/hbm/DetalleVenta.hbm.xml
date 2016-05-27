@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mx.restaurante.beans.DetalleVenta" table="tbl_det_vtas">
+        <id name="id" type="java.lang.Integer">
+            <column name="id_det" />
+            <generator class="identity" />
+        </id>
+        <property name="venta" type="java.lang.Integer">
+            <column name="id_enc"/>
+        </property>
+        <property name="carta" type="java.lang.Integer">
+            <column name="id_carta"/>
+        </property>
+        <property name="variante" type="java.lang.Integer">
+            <column name="id_variante"/>
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion"/>
+        </property>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="cantidad"/>
+        </property>
+        <property name="precio" type="java.lang.Double">
+            <column name="precio"/>
+        </property>
+        <property name="precioNeto" type="java.lang.Double">
+            <column name="precio_neto"/>
+        </property>
+        <property name="comanda" type="java.lang.Integer">
+            <column name="comanda"/>
+        </property>
+        <property name="mesero" type="java.lang.Integer">
+            <column name="id_mesero"/>
+        </property>
+        <property name="mesa" type="java.lang.Integer">
+            <column name="id_mesa"/>
+        </property>
+        <property name="comensal" type="java.lang.Integer">
+            <column name="comensal"/>
+        </property>
+        <property name="horaRegistro" type="java.util.Calendar">
+            <column name="hora_registro"/>
+        </property>
+		<property name="usuarioCancelacion" type="java.lang.Integer">
+            <column name="usr_cancelacion"/>
+        </property>
+		<property name="horaCancelacion" type="java.util.Calendar">
+            <column name="hora_cancelacion"/>
+        </property>
+        <property name="usuarioCortesia" type="java.lang.Integer">
+            <column name="usr_cortesia"/>
+        </property>
+		<property name="horaCortesia" type="java.util.Calendar">
+            <column name="hora_cortesia"/>
+        </property>
+        <property name="aplicaDescuento" type="java.lang.Integer">
+            <column name="aplica_dcto"/>
+        </property>
+        <property name="estatus" type="java.lang.Integer">
+            <column name="estatus"/>
+        </property>
+    </class>
+</hibernate-mapping>
